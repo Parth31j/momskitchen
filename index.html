@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moms Kitchen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Free icons -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><i class="fas fa-utensils"></i> Moms Kitchen</div>
+            <ul class="nav-links">
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#menu"><i class="fas fa-list"></i> Menu</a></li>
+                <li><a href="#gallery"><i class="fas fa-images"></i> Gallery</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#testimonials"><i class="fas fa-star"></i> Testimonials</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero fade-in">
+        <div class="hero-content">
+            <h1>Welcome to Moms Kitchen</h1>
+            <p>Homestyle comfort food in a warm, welcoming atmosphere. Come taste the love!</p>
+            <a href="#contact" class="btn">Book Now</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Cozy kitchen setting" class="hero-image zoom-on-hover">
+    </section>
+
+    <section id="menu" class="menu fade-in">
+        <h2>Our Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Classic Cheeseburger" class="zoom-on-hover" onclick="openLightbox(this.src)">
+                <h3>Classic Cheeseburger</h3>
+                <p>Juicy beef patty with cheese, lettuce, and tomato. $10</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1541599468348-e96984315621?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mac and Cheese" class="zoom-on-hover" onclick="openLightbox(this.src)">
+                <h3>Mac and Cheese</h3>
+                <p>Creamy, cheesy pasta baked to perfection. $12</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Apple Pie" class="zoom-on-hover" onclick="openLightbox(this.src)">
+                <h3>Apple Pie</h3>
+                <p>Warm, flaky crust with cinnamon-spiced apples. $7</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1551782450-17144efb5723?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Fried Chicken" class="zoom-on-hover" onclick="openLightbox(this.src)">
+                <h3>Fried Chicken</h3>
+                <p>Crispy, golden-fried chicken with herbs. $14</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Meatloaf" class="zoom-on-hover" onclick="openLightbox(this.src)">
+                <h3>Meatloaf</h3>
+                <p>Homemade meatloaf with gravy and sides. $13</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Pancakes" class="zoom-on-hover" onclick="openLightbox(this.src)">
+                <h3>Fluffy Pancakes</h3>
+                <p>Stack of pancakes with maple syrup. $9</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery fade-in">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Kitchen ambiance" onclick="openLightbox(this.src)">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Food preparation" onclick="openLightbox(this.src)">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Chef at work" onclick="openLightbox(this.src)">
+            <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Dessert display" onclick="openLightbox(this.src)">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Dining area" onclick="openLightbox(this.src)">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Burger close-up" onclick="openLightbox(this.src)">
+        </div>
+    </section>
+
+    <section id="about" class="about fade-in">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>Moms Kitchen has been serving delicious homestyle meals since 2010. Our chefs use only the freshest ingredients to bring you the warmth and comfort of home-cooked food.</p>
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Chef preparing comfort food" class="zoom-on-hover" onclick="openLightbox(this.src)">
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials fade-in">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <p>"The best comfort food in town! Felt like home."</p>
+                <cite>- Sarah J.</cite>
+            </div>
+            <div class="testimonial">
+                <p>"Amazing mac and cheese. Will be back soon!"</p>
+                <cite>- Mike T.</cite>
+            </div>
+            <div class="testimonial">
+                <p>"Cozy atmosphere and delicious apple pie."</p>
+                <cite>- Emily R.</cite>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact fade-in">
+        <h2>Contact Us</h2>
+        <p>Address: 123 Main St, City, State 12345</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@momskitchen.com</p>
+        <div class="contact-forms">
+            <form id="reservation-form">
+                <h3>Make a Reservation</h3>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="date" required>
+                <input type="time" required>
+                <button type="submit" class="btn">Reserve</button>
+            </form>
+            <form id="newsletter-form">
+                <h3>Newsletter Signup</h3>
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+        <form id="contact-form">
+            <h3>Send a Message</h3>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit" class="btn">Send</button>
+        </form>
+    </section>
+
+    <button id="back-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Lightbox for images -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="">
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Moms Kitchen. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
